@@ -1,0 +1,1 @@
+from .json_validator import validate_aws_iam_role_policy_resource
