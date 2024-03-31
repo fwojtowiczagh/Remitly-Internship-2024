@@ -39,6 +39,11 @@ class TestJsonValidator(unittest.TestCase):
         is_validated_json = validate_aws_iam_role_policy_resource(input_file)
         self.assertTrue(is_validated_json)
 
+    def test_validate_aws_iam_role_policy_resource_not_valid_json_input(self):
+        input_file = 'not_valid_json_input.txt'
+        is_validated_json = validate_aws_iam_role_policy_resource(input_file)
+        self.assertTrue(is_validated_json)
+
 
 if __name__ == '__main__':
     unittest.main()
